@@ -10,6 +10,18 @@ public class ListNode {
     public ListNode() {
     }
 
+    public int getData() {
+        return data;
+    }
+
+    public ListNode getNextListNode() {
+        return nextListNode;
+    }
+
+    public void setNextListNode(ListNode nextListNode) {
+        this.nextListNode = nextListNode;
+    }
+
     public ListNode(int data) {
         this.data = data;
     }
@@ -40,7 +52,7 @@ public class ListNode {
 
         ListNode deleteNode = node.nextListNode;
         node.nextListNode = deleteNode.nextListNode;
-        return head;
+        return deleteNode;
     }
 
     public boolean contains(ListNode head, ListNode nodeTocheck){

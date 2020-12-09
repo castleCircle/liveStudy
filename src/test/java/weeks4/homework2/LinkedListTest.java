@@ -51,6 +51,7 @@ class LinkedListTest {
         ListNode temp = listNode.remove(listNode,3);
         while(temp.nextListNode!=null){
             Assertions.assertNotEquals(3,temp.nextListNode.data);
+            System.out.println(temp.nextListNode.data);
             temp = temp.nextListNode;
         }
     }

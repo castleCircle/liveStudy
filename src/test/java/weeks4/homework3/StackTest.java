@@ -44,6 +44,12 @@ class StackTest {
         Assertions.assertThrows(RuntimeException.class,()->{
            stack.pop();
         });
+    }
+
+
+    @Test
+    @DisplayName("e쿠폰")
+    void test(){
 
     }
 
