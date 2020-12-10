@@ -33,7 +33,6 @@ public class ListNode {
         for(int i=0; i<position-1 ;i++){
             listNode = listNode.nextListNode;
         }
-
         nodeToAdd.nextListNode = listNode.nextListNode;
         listNode.nextListNode = nodeToAdd;
         return head;
