@@ -10,7 +10,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String personalKey = "af0ae9af5782de85273cbe14a7bbf11f722bf296";
+        String personalKey = "~~~~~~";
         final GitHub gitHub = new GitHubBuilder().withOAuthToken(personalKey).build();
         final GHRepository repository = gitHub.getRepository("whiteship/live-study");
         final List<GHIssue> issues = repository.getIssues(GHIssueState.ALL);

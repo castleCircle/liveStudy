@@ -10,16 +10,16 @@
 
     <!-- https://mvnrepository.com/artifact/org.kohsuke/github-api -->
     <dependencies>
-    <dependency>
-        <groupId>org.kohsuke</groupId>
-        <artifactId>github-api</artifactId>
-        <version>1.116</version>
-    </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>github-api</artifactId>
+            <version>1.116</version>
+        </dependency>
+        <dependency>
+             <groupId>org.junit.jupiter</groupId>
+             <artifactId>junit-jupiter</artifactId>
+             <version>RELEASE</version>
+             <scope>test</scope>
         </dependency>
     </dependencies>
 
