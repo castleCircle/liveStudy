@@ -3,7 +3,6 @@ package week8;
 
 public class Main {
 
-    int num = 1;
 
     //1.인터페이스 정의하는 방법
     /*
