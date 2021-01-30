@@ -1,4 +1,4 @@
 package week9;
 
-public class exceptionException {
+public class ExceptionException extends Exception{
 }

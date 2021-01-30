@@ -1,4 +1,4 @@
 package week9;
 
-public class runtimeexceptionException {
+public class RuntimeexceptionException extends RuntimeException{
 }
