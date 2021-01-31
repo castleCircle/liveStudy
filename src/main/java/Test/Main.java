@@ -28,7 +28,7 @@ public class Main {
                 list1.add(en);
             }else{
                 Entity root = list1.get(list1.size()-1);
-                recursive(root.getRows(),en,2,en.getLevel());
+                recursive(list1,root.getRows(),en,en.getLevel());
             }
         }
 

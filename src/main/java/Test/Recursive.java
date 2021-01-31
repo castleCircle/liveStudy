@@ -1,35 +1,31 @@
 package Test;
 
-import java.lang.reflect.Field;
 import java.util.List;
 
 public class Recursive {
 
-    public static<T> void recursive(List<T> responseList,T entity,int count,int level) throws NoSuchFieldException, IllegalAccessException {
+    public static<T> void recursive(List<T> parentList,List<T> responseList,T entity,int level) throws NoSuchFieldException, IllegalAccessException {
         List<T> nextEntity  = responseList;
-        while(count!=level){
+        
+        int startLevel = 2;
+        
+        while(startLevel != level){
             for(T parentNode : nextEntity){
-
-                for(Field field : parentNode.getClass().getDeclaredFields()){
-                    if(field.getName().equals("rows") && field.getType() == List.class){
-                        System.out.println("1");
-                    }
-                }
 
                 String parentHierarchy = (String)parentNode.getClass().getDeclaredField("hierarchy").get(parentNode);
                 String childHierarchy = (String)entity.getClass().getDeclaredField("hierarchy").get(entity);
 
                 List<T> rows = (List<T>) parentNode.getClass().getDeclaredField("rows").get(parentNode);
 
-                if(childHierarchy.contains(parentHierarchy) && count < level-1){
+                if(childHierarchy.contains(parentHierarchy) && startLevel < level-1){
                     nextEntity = rows;
-                    count++;
+                    startLevel++;
                     break;
                 }
 
                 if(childHierarchy.contains(parentHierarchy)){
                     nextEntity = rows;
-                    count++;
+                    startLevel++;
                     break;
                 }
             }
